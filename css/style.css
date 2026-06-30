@@ -611,6 +611,13 @@ section {
   padding: 28px;
   display: flex;
   flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold-dim);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
 .review-card-stars {
