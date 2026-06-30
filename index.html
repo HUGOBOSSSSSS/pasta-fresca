@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pasta Fresca Da Fabio — Pizzeria &amp; Pasteria à Chaumont-Gistoux</title>
+  <meta name="description" content="Pasta Fresca Da Fabio : pizzeria et pasteria italienne artisanale à Chaumont-Gistoux. Pizzas au four à bois, pâtes fraîches farcies maison, service traiteur et livraison.">
+
+  <!-- SANITY: site-wide SEO fields (title, description, og:image) will come from a 'siteSettings' singleton document -->
+  <meta property="og:title" content="Pasta Fresca Da Fabio — Chaumont-Gistoux">
+  <meta property="og:description" content="Pizzeria & Pasteria italienne artisanale — four à bois, pâtes fraîches farcies maison, traiteur & livraison.">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:image" content="" id="og-image-meta">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= HEADER / NAV ================= -->
+  <header class="site-header" id="site-header" data-sanity-id="siteSettings.header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo" data-sanity-id="siteSettings.logoText">
+        <span class="logo-name brand-name">Pasta Fresca</span>
+        <span class="logo-sub brand-sub">Da Fabio</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#hero" class="nav-link">Accueil</a></li>
+          <li><a href="#histoire" class="nav-link">Notre Histoire</a></li>
+          <li><a href="#avis" class="nav-link">Avis</a></li>
+          <li><a href="#carte" class="nav-link">La Carte</a></li>
+          <li><a href="#horaires" class="nav-link">Horaires</a></li>
+          <li><a href="#localisation" class="nav-link">Localisation</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="tel:+3210248188" class="btn btn-gold btn-small header-cta">Commandez maintenant</a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= NOTIFICATION (toast flottant sous la navbar) ================= -->
+  <!-- SANITY: hidden by JS unless siteNotification.active is true (and within startDate/endDate);
+       auto-disparaît au scroll une fois Hero + Notre Histoire passés -->
+  <div id="site-notification" class="site-notification" data-sanity-id="siteNotification" role="status" style="display:none;">
+    <p class="site-notification-text" id="site-notification-text"></p>
+    <button type="button" class="site-notification-close" id="site-notification-close" aria-label="Fermer la notification">&times;</button>
+  </div>
+
+  <!-- ================= HERO ================= -->
+  <section id="hero" class="hero" data-sanity-id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-photo" id="hero-photo" aria-hidden="true"></div>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="container hero-content fade-in">
+      <p class="hero-kicker" data-sanity-id="hero.kicker">Ristorante Italiano</p>
+      <h1 class="hero-title" data-sanity-id="hero.title">Pasta Fresca<br>Da Fabio</h1>
+      <p class="hero-subtitle" data-sanity-id="hero.subtitle">Pizzeria · Pasteria · Chaumont-Gistoux</p>
+      <div class="hero-actions">
+        <a href="tel:+3210248188" class="btn btn-gold">Commandez maintenant</a>
+        <a href="#carte" class="btn btn-outline">Découvrir la carte</a>
+      </div>
+    </div>
+    <a href="#histoire" class="scroll-cue" aria-label="Défiler vers le bas"><span></span></a>
+  </section>
+
+  <!-- ================= ABOUT / NOTRE HISTOIRE ================= -->
+  <section id="histoire" class="about" data-sanity-id="about">
+    <div class="container about-grid">
+      <div class="about-text fade-in">
+        <p class="section-kicker">Notre Histoire</p>
+        <h2 class="section-title" data-sanity-id="about.title">L'Italie authentique, au cœur de Chaumont-Gistoux</h2>
+        <div data-sanity-id="about.body">
+          <p>Chez <strong>Pasta Fresca Da Fabio</strong>, la tradition italienne se transmet dans chaque assiette. Nos pizzas sont cuites dans un véritable <strong>four à bois</strong>, pour une pâte fine et savoureuse, croustillante à souhait. Nos pâtes sont <strong>fraîches et artisanales</strong>, façonnées et farcies chaque jour sur place — demi-lunes à la truffe, ravioles de homard, triangles de chèvre… un savoir-faire fait main, sans compromis.</p>
+          <p>Que vous veniez en famille, entre amis ou pour organiser un événement, notre équipe vous accueille dans une ambiance chaleureuse et raffinée. Pasta Fresca Da Fabio propose également un <strong>service traiteur</strong> et la <strong>livraison à domicile</strong> sur Chaumont-Gistoux, Longueville, Bonlez, Dion-Valmont et Corroy-Le-Grand.</p>
+        </div>
+        <div class="about-badges" data-sanity-id="about.badges">
+          <span class="badge">Four à bois</span>
+          <span class="badge">Pâtes farcies maison</span>
+          <span class="badge">Service traiteur</span>
+          <span class="badge">Livraison à domicile</span>
+        </div>
+      </div>
+      <div class="about-visual fade-in" aria-hidden="true">
+        <div class="visual-frame" id="about-visual-frame">
+          <div class="visual-emblem">
+            <span>Da Fabio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AVIS CLIENTS ================= -->
+  <!-- SANITY: section is hidden by JS unless at least one review[]{featured: true} document exists -->
+  <section id="avis" class="reviews" data-sanity-id="reviews" style="display:none;">
+    <div class="container">
+      <div class="section-heading fade-in">
+        <p class="section-kicker">Avis Clients</p>
+        <h2 class="section-title">Ce que nos clients en disent</h2>
+        <div class="reviews-summary" id="reviews-summary"></div>
+      </div>
+      <div class="reviews-grid" id="reviews-grid" data-sanity-id="reviews.items"></div>
+    </div>
+  </section>
+
+  <!-- ================= CARTE / MENU ================= -->
+  <section id="carte" class="menu" data-sanity-id="menu">
+    <div class="container">
+      <div class="section-heading fade-in">
+        <p class="section-kicker">La Carte</p>
+        <h2 class="section-title">Notre Carte Complète</h2>
+        <p class="section-lead">Des produits frais, une cuisine italienne généreuse et authentique.</p>
+      </div>
+
+      <!-- SANITY: tabs are generated from menu.categories — see js/main.js renderMenu() -->
+      <div class="menu-tabs" id="menu-tabs" role="tablist" aria-label="Catégories de la carte"></div>
+      <div class="menu-panels" id="menu-panels" data-sanity-id="menu.items"></div>
+    </div>
+  </section>
+
+  <!-- ================= HORAIRES ================= -->
+  <section id="horaires" class="hours" data-sanity-id="hours">
+    <div class="container hours-grid">
+      <div class="fade-in">
+        <p class="section-kicker">Infos Pratiques</p>
+        <h2 class="section-title">Horaires d'ouverture</h2>
+
+        <table class="hours-table" data-sanity-id="hours.schedule">
+          <tbody>
+            <tr><th>Lundi</th><td class="closed">Fermé</td></tr>
+            <tr><th>Mardi</th><td>12h00 – 14h00 &nbsp;/&nbsp; 18h30 – 22h00</td></tr>
+            <tr><th>Mercredi</th><td>12h00 – 14h00 &nbsp;/&nbsp; 18h30 – 22h00</td></tr>
+            <tr><th>Jeudi</th><td>12h00 – 14h00 &nbsp;/&nbsp; 18h30 – 22h00</td></tr>
+            <tr><th>Vendredi</th><td>12h00 – 14h00 &nbsp;/&nbsp; 18h30 – 23h00</td></tr>
+            <tr><th>Samedi</th><td>18h30 – 23h00</td></tr>
+            <tr><th>Dimanche</th><td>18h30 – 22h00</td></tr>
+          </tbody>
+        </table>
+
+        <p class="hours-note" data-sanity-id="hours.lunchMenuNote">Plat du jour midi : <strong>15,40 €</strong> · avec café : <strong>16,90 €</strong></p>
+      </div>
+
+      <div class="fade-in delivery-card">
+        <p class="section-kicker">Traiteur &amp; Livraison</p>
+        <h3>Nous livrons chez vous</h3>
+        <p>Service traiteur et livraison à domicile dans les communes suivantes :</p>
+        <ul class="delivery-list" data-sanity-id="hours.deliveryZones">
+          <li>Chaumont-Gistoux</li>
+          <li>Longueville</li>
+          <li>Bonlez</li>
+          <li>Dion-Valmont</li>
+          <li>Corroy-Le-Grand</li>
+        </ul>
+        <a href="tel:+3210248188" class="btn btn-gold btn-block">Commander par téléphone</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LOCALISATION ================= -->
+  <section id="localisation" class="location" data-sanity-id="location">
+    <div class="container">
+      <div class="section-heading fade-in">
+        <p class="section-kicker">Nous Trouver</p>
+        <h2 class="section-title">Chaussée de Huy 188 B, 1325 Chaumont-Gistoux</h2>
+      </div>
+      <div class="map-wrap fade-in">
+        <iframe
+          id="map-iframe"
+          title="Localisation Pasta Fresca Da Fabio"
+          src="https://www.google.com/maps?q=Chauss%C3%A9e+de+Huy+188+B,+1325+Chaumont-Gistoux&output=embed"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div class="map-cta fade-in">
+        <a id="directions-link" href="https://www.google.com/maps/dir/?api=1&destination=Chauss%C3%A9e+de+Huy+188+B,+1325+Chaumont-Gistoux" target="_blank" rel="noopener" class="btn btn-outline">Voir l'itinéraire</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT / FOOTER ================= -->
+  <footer id="contact" class="footer" data-sanity-id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <p class="footer-logo"><span class="brand-name">Pasta Fresca</span> <span class="brand-sub">Da Fabio</span></p>
+        <p class="footer-tagline">Pizzeria · Pasteria · Chaumont-Gistoux</p>
+        <a id="facebook-link" href="https://www.facebook.com/PastaFrescaChaumont/" target="_blank" rel="noopener" class="social-link" aria-label="Facebook Pasta Fresca Da Fabio">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.79c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg>
+        </a>
+      </div>
+
+      <div class="footer-col" data-sanity-id="contact.details">
+        <h4>Contact</h4>
+        <p><a id="contact-phone" href="tel:+3210248188">010/24.81.88</a></p>
+        <p><a id="contact-email" href="mailto:info@pasta-fresca.be">info@pasta-fresca.be</a></p>
+        <p id="contact-address">Chaussée de Huy 188 B<br>1325 Chaumont-Gistoux</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Liens rapides</h4>
+        <p><a href="#carte">La Carte</a></p>
+        <p><a href="#horaires">Horaires</a></p>
+        <p><a href="#localisation">Localisation</a></p>
+      </div>
+
+      <div class="footer-col footer-order">
+        <h4>Une envie ce soir ?</h4>
+        <a href="tel:+3210248188" class="btn btn-gold btn-block">Commandez maintenant</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="current-year"></span> Pasta Fresca Da Fabio — Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
